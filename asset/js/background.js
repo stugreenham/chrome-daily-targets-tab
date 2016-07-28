@@ -44,7 +44,7 @@ window.site = {
 					goalEdit = goal.split('#');
 
 					// Display Tasks
-					$('.goal-list').append("<li class='goal-" + i + "' data-date='" + goalEdit[1] + "'><span class='name'>" + goalEdit[0] + "</span><a href='#'>&times;</a></li>");
+					$('.goals__list').append("<li class='goal-" + i + "' data-date='" + goalEdit[1] + "'><span class='name'>" + goalEdit[0] + "</span><a href='#'>&times;</a></li>");
 
 				}
 
@@ -61,7 +61,7 @@ window.site = {
 		//--------------------------------------------------------------
 
 			// NOW
-			$(".goal-form").submit(function() {
+			$(".goals__form").submit(function() {
 				if ($(".goal-date").val() !== "" ) {
 
 					// Build task to store then split into array to display
@@ -72,7 +72,7 @@ window.site = {
 					localStorage.setItem( "goal-" + i, goal );
 
 					// Append Task
-					$(".goal-list").append("<li class='goal-" + i + "' data-date='" + goalEdit[1] + "' data-type='" + goalEdit[2] + "'><span class='name'>" + goalEdit[0] + "</span><a href='#'>&times;</a></li>");
+					$(".goals__list").append("<li class='goal-" + i + "' data-date='" + goalEdit[1] + "' data-type='" + goalEdit[2] + "'><span class='name'>" + goalEdit[0] + "</span><a href='#'>&times;</a></li>");
 					$(".goal-name").val("");
 
 					i++;
@@ -87,7 +87,7 @@ window.site = {
 		// Remove a task
 		//--------------------------------------------------------------
 
-			$(".goal-list li a").on( "click", function() {
+			$(".goals__list li a").on( "click", function() {
 				localStorage.removeItem($(this).parent().attr("class"));
 				$(this).parent().hide();
 				for(i = 0; i < localStorage.length; i++) {

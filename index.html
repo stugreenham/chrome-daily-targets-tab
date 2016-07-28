@@ -19,49 +19,26 @@
 
 		<script src="/asset/js/lib/modernizr-2.7.1.min.js"></script>
 	</head>
-
 	<body>
 
-
-		<div class="flex-container">
-
-			<!--DAYS-->
-			<article class="flex-item">
-				<div class="goals">
-
-					<h1>Targets</h1>
-
-					<form class="goal-form">
+		<div class="outer">
+			<article class="goals">
+				<div class="goals__inner cf">
+					<h1 class="goals__title">Targets</h1>
+					<form class="goals__form">
 						<input type="hidden" class="goal-date" id="goal-date" />
 						<input type="text" class="goal-name" placeholder="Enter Task" required>
 					</form>
 
-					<ul class="goal-list"></ul>
-
+					<ul class="goals__list"></ul>
 				</div>
 			</article>
 
-
+			<p class="footer-msg">Built by <a href="#">@stugreenham</a></p>
 		</div>
-
-
-
-
-
 
 		<script src="/asset/js/lib/jquery-1.11.0.min.js"></script>
 		<script src="/asset/js/background.js"></script>
-
-		<!--
-		<script>
-			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-			e.src='//www.google-analytics.com/analytics.js';
-			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-			ga('create','UA-XXXXX-X');ga('send','pageview');
-		</script>
-		-->
-
 	</body>
+
 </html>
