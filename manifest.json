@@ -1,0 +1,22 @@
+{
+
+  "manifest_version": 2,
+  "name": "New Tab Targets",
+  "description": "Set your targets and see them every day in your Chrome new tab page.",
+  "version": "1.0",
+   "offline_enabled": true,
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+
+  "background": {
+      "persistent": false,
+      "scripts": ["/asset/js/background.js"]
+  }
+
+}
